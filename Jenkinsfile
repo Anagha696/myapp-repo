@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
-                sh "ls -lprh"
+                sh "/bin/bash purge_queue.sh"
                
                 }
             }

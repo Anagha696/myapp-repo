@@ -15,11 +15,9 @@ az account set --subscription $SUBSCRIPTION_ID
 # Purge messages from the queue
 
 
-if az storage message clear --queue-name $QUEUE_NAME --account-name $STORAGE_ACCOUNT --account-key $STORAGE_ACCOUNT_KEY; then
+ az storage message clear --queue-name $QUEUE_NAME --account-name $STORAGE_ACCOUNT --account-key $STORAGE_ACCOUNT_KEY; then
     echo "Queue $QUEUE_NAME purged successfully."
-else
-    echo "Failed to purge queue $QUEUE_NAME. Please check if the command is working as expected."
-    exit 1
-fi
+
+    
 echo "Queue $QUEUE_NAME purged successfully."
 
